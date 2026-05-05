@@ -1,5 +1,6 @@
 # 📊 Databricks Training - Week 1 Day 1
 
+
 ## 📌 Overview
 This repository contains my SQL practice work as part of the Databricks Data Engineering training.
 
