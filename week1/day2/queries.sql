@@ -182,3 +182,21 @@ LEFT JOIN Project p
 ON d.department_id = p.department_id
 GROUP BY d.name
 ORDER BY project_count;
+
+-- Q64: Find employees who earn the highest salary in each department
+SELECT name, salary, department_id
+FROM Employee e
+WHERE salary = (
+    SELECT MAX(salary)
+    FROM Employee
+    WHERE department_id = e.department_id
+);
+
+-- Q65: Find employees whose age is greater than the average age of their department
+SELECT name, age, department_id
+FROM Employee e
+WHERE age > (
+    SELECT AVG(age)
+    FROM Employee
+    WHERE department_id = e.department_id
+);
