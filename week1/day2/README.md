@@ -40,7 +40,7 @@ This day focused on completing the remaining SQL queries and strengthening under
 ---
 
 ## ✅ Work Completed
-- ✔️ Completed remaining **23 SQL questions**
+- ✔️ Completed remaining **25 SQL questions**
 - ✔️ Practiced subqueries and nested queries
 - ✔️ Implemented real-world query scenarios
 - ✔️ Updated queries.sql and output.txt
