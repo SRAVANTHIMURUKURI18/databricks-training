@@ -1,4 +1,3 @@
---------------------------------------------------
 -- SUBQUERIES & ADVANCED QUERIES
 
 -- Q41: Find employees who are not assigned to any project
@@ -42,8 +41,6 @@ GROUP BY d.name
 ORDER BY AVG(e.salary) DESC
 LIMIT 1;
 
---------------------------------------------------
-
 -- Q46: Find employee with highest salary
 SELECT *
 FROM Employee
@@ -79,13 +76,12 @@ WHERE salary > (
     WHERE department_id = e.department_id
 );
 
---------------------------------------------------
+--- Q51: Find the Nth highest salary (example: N = 3)
 
--- Q51: Find third highest salary
 SELECT DISTINCT salary
 FROM Employee
 ORDER BY salary DESC
-LIMIT 1 OFFSET 2;
+LIMIT 1 OFFSET (N-1);
 
 -- Q52: Find employees older than all employees in HR department
 SELECT *
@@ -125,6 +121,8 @@ WHERE hire_date = (
 
 --------------------------------------------------
 
+-- Combined Moderate Difficulty Queries (10)
+
 -- Q56: Find total salary of employees hired in 2020
 SELECT SUM(salary)
 FROM Employee
@@ -153,8 +151,6 @@ SELECT department_id, COUNT(*) AS emp_count, AVG(salary)
 FROM Employee
 GROUP BY department_id
 HAVING COUNT(*) > 2;
-
---------------------------------------------------
 
 -- Q61: Find employees earning more than department average (with name)
 SELECT name, salary
